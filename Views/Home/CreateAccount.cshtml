@@ -1,0 +1,30 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@Model ACLEDABank.Models.BankAccount
+<h2>🏦 Open New Bank Account</h2>
+@if(ViewBag.Success != null)
+{
+    <p style="color:green">✅ @ViewBag.Success</p>
+}
+
+<form method="post">
+    <div>
+        <label>Owner Name: </label>
+        <input type="text" name="OwnerName" />
+    </div>
+    <br />
+    <div>
+        <label>Account Number:</label>
+        <input type="text" name="AccountNumber" />
+    </div>
+    <br />
+    <div>
+        <label>Balance: </label>
+        <input type="number" name="Balance" step="0.01" />
+    </div>
+    <br />
+    <button type="submit">✅ Create Account</button>
+</form>
