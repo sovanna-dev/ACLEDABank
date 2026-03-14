@@ -1,6 +1,14 @@
 ﻿namespace ACLEDABank.Models
 {
-    public class IBankService
+    public interface IBankService
     {
+        // Contract! Any class using this 
+        // Must implement these methods!
+        void Deposit(decimal amount);
+        void Withdraw(decimal amount);
+        string GetAccountType();
+        decimal GetBalance();
+
+
     }
 }

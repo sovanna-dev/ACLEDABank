@@ -1,40 +1,40 @@
-﻿namespace ACLEDABank.Models
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace ACLEDABank.Models
 {
-    public class BankAccount
+    [Table("tblBankAccounts")]
+    public class BankAccount : IBankService
     {
         // Properties 
+        [Key]
+        public int ID { get; set; }
         public string OwnerName { get; set; }
         public string AccountNumber { get; set; }
-        // Private = hidden inside, nobody can touch
-        private decimal _balance;
-        // Public = safe way to READ balance
-        public decimal Balance
-        {
-            get { return _balance; }
-        }
+        public decimal Balance { get; set; }
 
-        // Method: Deposit money
+        // Interface methods
         public void Deposit(decimal amount)
-        {
-            if (amount > 0)
-            {
-                _balance += amount;
-            }
+        { 
+            if (amount > 0) Balance += amount;
         }
 
-        // Method: Withdraw money
         public void Withdraw(decimal amount)
-        {
-            if (amount > 0 && amount <= _balance)
-            {
-                _balance -= amount;
-            }
-        }
-        // Virtual method: can be overridden by child classes
-        public virtual string GetAccountType()
         { 
+            if (amount > 0 && amount <= Balance) 
+                Balance -= amount;
+        }
+
+        public virtual string GetAccountType()
+        {
             return "Basic Bank Account";
         }
+
+        public decimal GetBalance()
+        {
+            return Balance;
+        }
+
 
 
     }

@@ -1,3 +1,5 @@
+using ACLEDABank.Models;
+using Microsoft.EntityFrameworkCore;
 namespace ACLEDABank
 {
     public class Program
@@ -5,6 +7,13 @@ namespace ACLEDABank
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+
+            // register database
+            builder.Services.AddDbContext<ACLEDABankContext>(options =>
+                options.UseSqlServer(
+                    builder.Configuration.GetConnectionString("ACLEDABankDB")
+                    )
+                );
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
