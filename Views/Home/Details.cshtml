@@ -1,0 +1,12 @@
+﻿@model BankAccount
+
+<h2> Account Details</h2>
+<div style="border:1px solid #ccc; padding:20px">
+    <p>👤 Owner: @Model.OwnerName</p>
+    <p>🔢 Account: @Model.AccountNumber</p>
+    <p>💰 Balance: $@Model.Balance</p>
+    <p>📋 Type: @Model.GetAccountType()</p>
+</div>
+
+<br />
+<a href="/Home/Index">← Back to All Accounts</a>

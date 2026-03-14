@@ -12,6 +12,7 @@
         <th>Owner Name</th>
         <th>Account Number</th>
         <th>Balance</th>
+        <th>Account</th>
     </tr>
 
     @foreach (var acc in Model)
@@ -21,6 +22,16 @@
             <td>@acc.OwnerName</td>
             <td>@acc.AccountNumber</td>
             <td>$@acc.Balance</td>
+            <td>
+                <a href="/Home/Details/@acc.ID">
+                    👁️ View
+                 </a>
+                 &nbsp;
+                 <a href="/Home/Delete/@acc.ID"
+                    onclick="return confirm('Are you sure you want to delete @acc.OwnerName account?');">
+                    🗑️ Delete
+                  </a>
+            </td>
         </tr>
     }
 </table>

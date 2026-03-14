@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ACLEDABank")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+08cf3a52aa5065de9929bb4b81f5df44c8ace306")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+61bf09e35ab1d3187640cdd5b506151927135f70")]
 [assembly: System.Reflection.AssemblyProductAttribute("ACLEDABank")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ACLEDABank")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
