@@ -143,3 +143,8 @@ D:\ACLEDABank\ACLEDABank\ACLEDABank\obj\Debug\net9.0\refint\ACLEDABank.dll
 D:\ACLEDABank\ACLEDABank\ACLEDABank\obj\Debug\net9.0\ACLEDABank.pdb
 D:\ACLEDABank\ACLEDABank\ACLEDABank\obj\Debug\net9.0\ACLEDABank.genruntimeconfig.cache
 D:\ACLEDABank\ACLEDABank\ACLEDABank\obj\Debug\net9.0\ref\ACLEDABank.dll
+D:\ACLEDABank\ACLEDABank\ACLEDABank\bin\Debug\net9.0\Microsoft.OpenApi.dll
+D:\ACLEDABank\ACLEDABank\ACLEDABank\bin\Debug\net9.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\ACLEDABank\ACLEDABank\ACLEDABank\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\ACLEDABank\ACLEDABank\ACLEDABank\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\ACLEDABank\ACLEDABank\ACLEDABank\obj\Debug\net9.0\ACLEDABank.MvcApplicationPartsAssemblyInfo.cs
