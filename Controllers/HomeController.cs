@@ -20,15 +20,40 @@ namespace ACLEDABank.Controllers
 
         public IActionResult About()
         {
-            List<BankAccount> accounts = new List<BankAccount>()
-            {
-                new BankAccount { OwnerName="Sovanna", AccountNumber= "ACC-001", Balance= 5000 },
-                new BankAccount { OwnerName= "Dara" , AccountNumber = "ACC-002", Balance= 3200 },
-                new BankAccount { OwnerName = "Sreymom",  AccountNumber = "ACC-003", Balance = 8750 },
-                new BankAccount { OwnerName = "Piseth",   AccountNumber = "ACC-004", Balance = 1500 },
-            };
+            BankAccount account = new BankAccount();
+            account.OwnerName = "Sovanna";
+            account.AccountNumber = "ACC-001";
 
-            return View(accounts);
+            // Test Deposit and Withdraw
+            account.Deposit(1000);
+            account.Deposit(3000);
+            account.Withdraw(500);
+
+            ViewBag.Owner = account.OwnerName;
+            ViewBag.Balance = account.Balance;
+
+            // Saving Account 
+            SavingAccount saving = new SavingAccount();
+            saving.OwnerName = "Sovanna";
+            saving.AccountNumber = "SAV-001";
+            saving.InterestRate = 5;
+            saving.Deposit(10000);
+            saving.AddInterest();
+
+            // Loan Account
+            LoanAccount loan = new LoanAccount();
+            loan.OwnerName = "Dara";
+            loan.AccountNumber = "LOAN-001";
+            loan.LoanAmount = 12000;
+            loan.LoanMonths = 12;
+
+            ViewBag.SavingOwner = saving.OwnerName;
+            ViewBag.SavingBalance = saving.Balance;
+            ViewBag.LoanOwner = loan.OwnerName;
+            ViewBag.MonthlyPayment = loan.MonthlyPayment();
+
+            return View();
+
         }
         public IActionResult Index()
         {

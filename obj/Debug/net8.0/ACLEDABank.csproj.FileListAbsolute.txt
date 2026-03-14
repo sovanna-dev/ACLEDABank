@@ -31,3 +31,4 @@ D:\ACLEDABank\ACLEDABank\ACLEDABank\obj\Debug\net8.0\refint\ACLEDABank.dll
 D:\ACLEDABank\ACLEDABank\ACLEDABank\obj\Debug\net8.0\ACLEDABank.pdb
 D:\ACLEDABank\ACLEDABank\ACLEDABank\obj\Debug\net8.0\ACLEDABank.genruntimeconfig.cache
 D:\ACLEDABank\ACLEDABank\ACLEDABank\obj\Debug\net8.0\ref\ACLEDABank.dll
+D:\ACLEDABank\ACLEDABank\ACLEDABank\obj\Debug\net8.0\ACLEDABank.sourcelink.json
