@@ -14,3 +14,16 @@
 <h3> Loan Account</h3>
 <p>Owner: @ViewBag.LoanOwner</p>
 <p>Monthly Payment: $@ViewBag.MonthlyPayment</p>
+
+<h2>All Account Types</h2>
+@foreach(var acc in
+        (List<BankAccount>)ViewBag.Accounts)
+{
+    <div style="border: 1px solid #ccc;
+                padding:10px; margin:10px">
+        <p> Owner: @acc.OwnerName</p>
+        <p> Balance: $@acc.Balance</p>
+        <p> Type: @acc.GetAccountType()</p>
+            
+     </div>
+}

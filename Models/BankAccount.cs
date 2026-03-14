@@ -30,6 +30,11 @@
                 _balance -= amount;
             }
         }
+        // Virtual method: can be overridden by child classes
+        public virtual string GetAccountType()
+        { 
+            return "Basic Bank Account";
+        }
 
 
     }

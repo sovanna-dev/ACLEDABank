@@ -52,6 +52,21 @@ namespace ACLEDABank.Controllers
             ViewBag.LoanOwner = loan.OwnerName;
             ViewBag.MonthlyPayment = loan.MonthlyPayment();
 
+            // List of different accounts - All under BankAccount type
+            List<BankAccount> accounts = new List<BankAccount>()
+            {
+                new BankAccount { OwnerName = "Basic User" },
+                new SavingAccount { OwnerName = "Sovanna",
+                                   InterestRate = 5},
+                new LoanAccount { OwnerName = "Dara",
+                                   LoanAmount = 15000,
+                                    LoanMonths = 12},
+             };
+
+            // Add deposits
+            accounts[0].Deposit(1000);
+            accounts[1].Deposit(10000);
+            ViewBag.Accounts = accounts;
             return View();
 
         }

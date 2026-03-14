@@ -11,5 +11,11 @@
             decimal interest = Balance * InterestRate / 100;
             Deposit(interest); // Reuse Deposit method from BankAccount
         }
+
+        // Override parent method!
+        public override string GetAccountType()
+        {
+            return " Saving Account - Interest Rate: " + InterestRate + "%";
+        }
     }
 }

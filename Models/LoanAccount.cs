@@ -8,5 +8,10 @@
         {
              return LoanAmount / LoanMonths;
         }
+
+        public override string GetAccountType()
+        {
+                return "Loan Account - Monthly Payment: $" + MonthlyPayment();
+        }
     }
 }
